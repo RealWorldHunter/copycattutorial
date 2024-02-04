@@ -1,0 +1,34 @@
+{
+  "name": "copyclipcat",
+  "version": "1.0.0",
+  "description": "this extension will paste clipboard content",
+  "permissions": [],
+  "host_permissions": ["*://*/*"],
+  "author":"",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+
+      ],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+    },
+    "default_title": "testextension",
+    "default_popup": "popup.html",
+    "width":800,
+    "height":800
+  },
+  "manifest_version": 3
+}
